@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <title> {{title}} </title>
+    </head>
+    <body>
+        <h2> {{title}} </h2>
+        <p> RPI UUID = {{uuid}} </p>
+        <p> Distance travelled = {{distanceTravelled}} </p>
+        <h2> Map </h2>
+        <h4> To update the image, please force refresh. </h4>
+        <h5>
+            Windows/Linux: ctrl + F5, 
+            Mac: command + shift+ R
+        </h5>
+        <img content="no-cache, no-store, must-revalidate" src="{{img}}" max-width=70% height=auto/>
+        <img content="no-cache, no-store, must-revalidate" src="{{url_for('static', filename='help.png')}}" width="250px" height=auto/>
+        <a href="/showimg" class="button">Show Image</a>
+        <p> Forward = {{front}} , Backward = {{back}} </p>
+        <p> left = {{left}} , Right = {{right}} </p>
+        <p> curr = {{curr}} </p>
+        <h2> Remote </h2>
+        <a href="/Forward" class="button">Forward</a>
+        <a href="/Backeard" class="button">Backward</a>
+        <a href="/Left" class="button">Left</a>
+        <a href="/Right" class="button">Right</a>
+        <a href="/allStop" class="button">Stop!</a>
+        <a href="/reset" class="button">Reset</a>
+        <a href="/" class="button">home</a>
+    </body>
+</html>
